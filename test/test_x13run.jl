@@ -308,7 +308,7 @@ end
     end
     
     # test with file argument
-    if length(abspath(pathof(TimeSeriesEcon),"..","..", "data","reg1.mdl")) < 124
+    if length(abspath(pathof(TimeSeriesEcon),"..","..", "data","reg1.mdl")) < 118
         xts = X13.series(inventories, title="Monthly Inventory")
         spec = X13.newspec(xts)
         X13.transform!(spec; func=:log, save=:all)
@@ -848,7 +848,7 @@ end
     end
 
     # Manual example 1, but with file argument
-    if length(abspath(pathof(TimeSeriesEcon),"..","..", "data","pickmdl.mdl")) < 124
+    if length(abspath(pathof(TimeSeriesEcon),"..","..", "data","pickmdl.mdl")) < 118
         ts = TSeries(1976M1, mvsales[50:250])
         xts = X13.series(ts, title="Monthly Sales")
         spec = X13.newspec(xts)
